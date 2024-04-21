@@ -1,0 +1,14 @@
+.button {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 7px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    align-content: center;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+    column-gap: 4px;
+    align-items: center;
+}

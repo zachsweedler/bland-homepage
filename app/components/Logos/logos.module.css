@@ -1,0 +1,22 @@
+.logo_wrapper {
+   margin: 0px 30px;
+   user-select: none;
+}
+
+.fade_left {
+   background: linear-gradient(to right, var(--color-background), transparent);
+   position: absolute;
+   left: 30px;
+   z-index: 1000;
+   height: 100px;
+   width: 100px;
+}
+
+.fade_right {
+   background: linear-gradient(to left, var(--color-background), transparent);
+   position: absolute;
+   right: 30px;
+   z-index: 1000;
+   height: 100px;
+   width: 100px;
+}

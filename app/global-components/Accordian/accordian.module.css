@@ -1,0 +1,30 @@
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   row-gap: 20px;
+   width: 100%;
+}
+
+.question_wrapper {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   cursor: pointer;
+   padding: 20px;
+   border-radius: var(--border-radius-small);
+}
+
+.question_wrapper:hover {
+   background-color: var(--color-background-dark);
+}
+
+.question {
+   white-space: nowrap;
+   width: 100%;
+}
+
+.answer_wrapper {
+   height: auto;
+   color: var(--color-text-light);
+}

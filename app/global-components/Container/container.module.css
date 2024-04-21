@@ -1,0 +1,22 @@
+.container {
+   padding: 0px 30px;
+   margin: auto;
+   position: relative;
+   width: 100%;
+}
+
+.large {
+   max-width: var(--container-large);
+}
+
+.medium {
+   max-width: var(--container-medium);
+}
+
+.small {
+   max-width: var(--container-small);
+}
+
+.xsmall {
+   max-width: var(--container-xsmall);
+}

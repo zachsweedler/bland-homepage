@@ -1,0 +1,31 @@
+.wrapper {
+    height: auto;
+    padding: 100px 0px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 100px;
+}
+
+.grid {
+    display: grid;
+    grid-gap: 12px;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.grid_1 {
+    grid-column: span 3; 
+}
+
+.grid_2 {
+    grid-column: span 3; 
+}
+
+.grid_3,
+.grid_4,
+.grid_5 {
+    grid-column: span 2; 
+}
+
+.grid_6 {
+    grid-column: 1 / span 6;
+}

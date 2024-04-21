@@ -1,0 +1,11 @@
+.horz_divider {
+    height: 1px;
+    width: 100%;
+    background-color: var(--color-border);
+}   
+
+.vert_divider {
+    height: 100%;
+    width: 1px;
+    background-color: var(--color-border);
+}

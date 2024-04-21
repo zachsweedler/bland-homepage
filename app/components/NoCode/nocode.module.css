@@ -1,0 +1,17 @@
+.wrapper {
+    background-color: var(--color-background-dark);
+    padding: 100px 0px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 100px;
+}
+
+.card_wrapper {
+    display: flex;
+    flex-direction: row;
+    column-gap: 12px;
+    width: 100%;
+}
