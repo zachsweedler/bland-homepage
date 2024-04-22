@@ -3,8 +3,8 @@
     top: 0;
     height: 60px;
     justify-content: space-between;
-    background-color: var(--color-background);
-    border-bottom: 1px solid #EEEEEE;
+    background-color: var(--color-background-opacity);
+    backdrop-filter: blur(12px);
     display: flex;
     flex-direction: row;
     width: 100vw;

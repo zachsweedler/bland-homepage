@@ -1,7 +1,6 @@
 .wrapper {
    display: flex;
    flex-direction: column;
-   row-gap: 20px;
    width: 100%;
 }
 
@@ -16,7 +15,7 @@
 }
 
 .question_wrapper:hover {
-   background-color: var(--color-background-dark);
+   background-color: #F9F9F4;
 }
 
 .question {
@@ -27,4 +26,6 @@
 .answer_wrapper {
    height: auto;
    color: var(--color-text-light);
+   padding: 20px;
+   background-color: var(--color-background-dark);
 }

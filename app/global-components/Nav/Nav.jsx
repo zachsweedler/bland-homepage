@@ -16,7 +16,7 @@ function Nav() {
          </div>
          <div className={styles.cat_wrapper}>
             <TextLink>Contact Sales</TextLink>
-            <Button>Dashboard</Button>
+            <Button>Login</Button>
          </div>
       </div>
    );

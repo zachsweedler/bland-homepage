@@ -2,7 +2,7 @@
     height: 650px;
     display: flex;
     flex-direction: column;
-    row-gap: 60px;
+    row-gap: 90px;
     align-items: center;
     justify-content: center;
 }
@@ -10,13 +10,13 @@
 .heading_wrapper {
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
+    row-gap: 30px;
     align-items: center;
     position: relative;
 }
 
 .heading {
-    font-size: 100px;
+    font-size: 115px;
     font-weight: 400;
     letter-spacing: -3px;
     line-height: 90px;

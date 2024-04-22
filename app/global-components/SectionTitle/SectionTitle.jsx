@@ -3,10 +3,16 @@ import styles from "./section_title.module.css";
 import Button from "../Button/Button";
 import TextLink from "../TextLink/TextLink";
 
-function SectionTitle({ heading, subheading, buttonText, linkText }) {
+function SectionTitle({
+   heading,
+   subheading,
+   buttonText,
+   alignLeft,
+   linkText,
+}) {
    return (
       <div className={styles.wrapper}>
-         <div className={styles.heading_wrapper}>
+         <div className={alignLeft ? styles.heading_wrapper_align_left : styles.heading_wrapper}>
             <p className={styles.subheading}>{subheading}</p>
             <h1 className={styles.heading}>{heading}</h1>
          </div>

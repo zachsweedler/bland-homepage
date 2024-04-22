@@ -3,6 +3,7 @@ import styles from "./hero.module.css";
 import CallInput from "./CallInput/CallInput";
 
 function Hero() {
+   
    return (
          <div className={styles.wrapper}>
             <div className={styles.heading_wrapper}>

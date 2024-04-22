@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./features.module.css";
 import Container from "@/app/global-components/Container/Container";
-import Button from "@/app/global-components/Button/Button";
-import TextLink from "@/app/global-components/TextLink/TextLink";
 import Card from "@/app/global-components/Card/Card";
 import SectionTitle from "@/app/global-components/SectionTitle/SectionTitle";
+import Image from "next/image";
+import WavePlayer from "./WavePlayer/WavePlayer";
 
 function Features() {
    return (
@@ -28,37 +28,113 @@ function Features() {
                   className={styles.grid_1}
                   heading="Batch Calls"
                   subheading="Send or receive millions of calls simultaneously"
+                  graphic={
+                     <>
+                        <Image
+                           src="/features/batch/person1.svg"
+                           className={styles.person_1}
+                           alt=""
+                           width={140}
+                           height={140}
+                        />
+                        <Image
+                           src="/features/batch/person2.svg"
+                           className={styles.person_2}
+                           alt=""
+                           width={90}
+                           height={90}
+                        />
+                        <Image
+                           src="/features/batch/person3.svg"
+                           className={styles.person_3}
+                           alt=""
+                           width={190}
+                           height={190}
+                        />
+                        <Image
+                           src="/features/batch/person4.svg"
+                           className={styles.person_4}
+                           alt=""
+                           width={90}
+                           height={90}
+                        />
+                        <Image
+                           src="/features/batch/phone.svg"
+                           className={styles.phone}
+                           alt=""
+                           width={179}
+                           height={179}
+                        />
+                     </>
+                  }
                />
                <Card
                   insideText
                   className={styles.grid_2}
                   heading="Voices & Language"
                   subheading="Select from our library or create a voice clone."
+                  graphic={<WavePlayer className={styles.wave_player} />}
                />
                <Card
                   insideText
                   className={styles.grid_3}
                   heading="Dynamic Data"
                   subheading="Integrate APIs to inject live data into phone calls."
+                  graphic={
+                     <Image
+                        src="/features/dynamic-data.svg"
+                        className={styles.dynamic_data}
+                        alt=""
+                        width={429}
+                        height={300}
+                     />
+                  }
                />
                <Card
+                  top
                   insideText
                   className={styles.grid_4}
                   heading="SMS"
                   subheading="Enable your agent to respond via SMS"
-                  top
+                  graphic={
+                     <Image
+                        src="/features/iphone-sms.png"
+                        className={styles.sms_iphone}
+                        alt=""
+                        width={213}
+                        height={435}
+                     />
+                  }
                />
                <Card
                   insideText
                   className={styles.grid_5}
                   heading="Live Transfers"
                   subheading="Conditionally transfer calls to a human."
+                  graphic={
+                     <Image
+                        src="/features/live-transfer.svg"
+                        className={styles.live_transfers}
+                        alt=""
+                        width={636}
+                        height={282}
+                     />
+                  }
                />
                <Card
                   insideText
                   className={styles.grid_6}
                   heading="Pathways"
                   subheading="Gain greater control over your AI agent and the conversational flow."
+                  graphic={
+                     <Image
+                        src="/features/pathways.svg"
+                        className={styles.pathways}
+                        alt=""
+                        width={1590}
+                        height={567}
+                     />
+                  }
                />
             </div>
          </div>

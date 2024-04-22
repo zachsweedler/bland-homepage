@@ -21,7 +21,7 @@ export default function Home() {
          <Code/>
          <Scalability/>
          <NoCode/>
-         <Versatility/>
+         {/* <Versatility/> */}
          <FAQs/>
          <Footer/>
       </div>

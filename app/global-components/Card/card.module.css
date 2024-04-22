@@ -18,12 +18,18 @@
    position: absolute;
    top: 30px;
    left: 30px;
+   display: flex;
+   flex-direction: column;
+   row-gap: 9px;
 }
 
 .heading_wrapper_bottom {
    position: absolute;
    bottom: 30px;
    left: 30px;
+   display: flex;
+   flex-direction: column;
+   row-gap: 9px;
 }
 
 .heading_wrapper_outside {
