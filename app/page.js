@@ -7,7 +7,6 @@ import Infra from "./components/Infra/Infra";
 import Logos from "./components/Logos/Logos";
 import NoCode from "./components/NoCode/NoCode";
 import Scalability from "./components/Scalability/Scalability";
-import Versatility from "./components/Versatility/Versatility";
 import Footer from "./global-components/Footer/Footer";
 
 
@@ -21,7 +20,6 @@ export default function Home() {
          <Code/>
          <Scalability/>
          <NoCode/>
-         {/* <Versatility/> */}
          <FAQs/>
          <Footer/>
       </div>

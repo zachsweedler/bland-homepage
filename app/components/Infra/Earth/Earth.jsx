@@ -1,13 +1,31 @@
 "use client";
 import React, { useEffect, useRef } from "react";
-import Globe from "react-globe.gl";
 import globeJson from "./countries_110m.json";
 import hexRgb from "hex-rgb";
-import * as THREE from 'three';
+import * as THREE from "three";
+import GlobeTmpl from "react-globe.gl";
+
+// Define a functional component that forwards a ref and accepts other props
+const Globe = React.forwardRef((props, ref) => {
+   if (typeof window !== 'undefined') {
+     return <GlobeTmpl {...props} ref={ref} />;
+   } else {
+     return null;
+   }
+ });
+ Globe.displayName = 'Globe';
 
 function Earth() {
 
-   const globeEl = useRef();
+   const globeRef = useRef();
+
+   useEffect(() => {
+      console.log("globe accessed");
+      globeRef.current.controls().enabled = false;
+      globeRef.current.controls().autoRotate = true;
+      globeRef.current.controls().autoRotateSpeed = 0.7;
+      globeRef.current.pointOfView({ lat: 15, lng: -90.5, altitude: 1.7 });
+   }, []);
 
    const pointsData = [
       {
@@ -72,7 +90,7 @@ function Earth() {
       },
       {
          startLat: 40.7128,
-         startLng: -74.0060,
+         startLng: -74.006,
          endLat: 37.8688,
          endLng: -122.2093,
          color: "#ffffff",
@@ -119,36 +137,27 @@ function Earth() {
          time: 2000,
       },
    ];
-   
+
    const ringsData = pointsData.map((point) => {
       return {
          lat: point.startLat,
          lng: point.startLng,
          radius: 5,
          color: "#ffffff",
-         speed: 2, 
+         speed: 2,
          repeat: 1000,
       };
    });
 
-   useEffect(() => {
-      globeEl.current.controls().enabled = false;
-      globeEl.current.controls().autoRotate = true;
-      globeEl.current.controls().autoRotateSpeed = 0.7;
-      globeEl.current.pointOfView({ lat: 15, lng: -90.5, altitude: 1.7 });
-   }, []);
-
    return (
       <Globe
-         ref={globeEl}
-
+         ref={globeRef}
          // Basic
          globeImageUrl="/blurple.svg"
          backgroundColor="rgba(0,0,0,0)"
          atmosphereColor="#ddd5ff"
          color
          height={1100}
-
          // Arcs
          arcsData={pointsData}
          arcColor="color"
@@ -157,7 +166,6 @@ function Earth() {
          arcDashLength="dash"
          arcAltitudeAutoScale="scale"
          arcDashAnimateTime="time"
-
          // Land
          hexPolygonsData={globeJson.features}
          hexPolygonColor={(geometry) => {
@@ -165,7 +173,6 @@ function Earth() {
                geometry.properties.abbrev_len % 4
             ];
          }}
- 
          // Rings
          ringsData={ringsData}
          ringMaxRadius="radius"
@@ -175,24 +182,28 @@ function Earth() {
          }}
          ringPropagationSpeed="speed"
          ringRepeatPeriod="repeat"
-
          // Stars
          customLayerData={[...Array(500).keys()].map(() => ({
             lat: (Math.random() - 1) * 360,
             lng: (Math.random() - 1) * 360,
             altitude: Math.random() * 2,
             size: Math.random() * 0.5,
-            color: '#ffffff',
-          }))}
-          customThreeObject={(data) => {
+            color: "#ffffff",
+         }))}
+         customThreeObject={(data) => {
             const { size, color } = data;
-            return new THREE.Mesh(new THREE.SphereGeometry(size), new THREE.MeshBasicMaterial({ color }));
-          }}
-          customThreeObjectUpdate={(obj, data) => {
+            return new THREE.Mesh(
+               new THREE.SphereGeometry(size),
+               new THREE.MeshBasicMaterial({ color })
+            );
+         }}
+         customThreeObjectUpdate={(obj, data) => {
             const { lat, lng, altitude } = data;
-            return Object.assign(obj.position, globeEl.current?.getCoords(lat, lng, altitude));
-          }}
-         
+            return Object.assign(
+               obj.position,
+               globeRef.current?.getCoords(lat, lng, altitude)
+            );
+         }}
       />
    );
 }

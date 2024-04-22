@@ -1,10 +1,11 @@
-"use client";
 import React from "react";
 import styles from "./infra.module.css";
 import Container from "@/app/global-components/Container/Container";
-import Earth from "./Earth/Earth";
 import TextLink from "@/app/global-components/TextLink/TextLink";
 import Button from "@/app/global-components/Button/Button";
+import dynamic from 'next/dynamic'
+const NoSSREarth = dynamic(() => import('./Earth/Earth'), { ssr: false })
+ 
 
 function Infra() {
    return (
@@ -21,7 +22,7 @@ function Infra() {
                </div>
             </div>
             <div className={styles.globe}>
-               <Earth />
+               <NoSSREarth />
             </div>
          </div>
       </Container>

@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./faq.module.css";
 import Accordian from "@/app/global-components/Accordian/Accordian";
 import SectionTitle from "@/app/global-components/SectionTitle/SectionTitle";
-import { HorzDivider } from "@/app/global-components/Divider/Divider";
 import Container from "@/app/global-components/Container/Container";
 
 function FAQs() {
