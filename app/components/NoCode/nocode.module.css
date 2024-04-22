@@ -1,17 +1,34 @@
 .wrapper {
-    background-color: var(--color-background-dark);
-    padding: 100px 0px;
+   background-color: var(--color-background-dark);
+   padding: 100px 0px;
 }
 
 .content {
-    display: flex;
-    flex-direction: column;
-    row-gap: 100px;
+   display: flex;
+   flex-direction: column;
+   row-gap: 100px;
 }
 
 .card_wrapper {
-    display: flex;
-    flex-direction: row;
-    column-gap: 12px;
-    width: 100%;
+   display: flex;
+   flex-direction: row;
+   column-gap: 12px;
+   width: 100%;
+}
+
+.screenshot {
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+   bottom: 0px;
+   width: 80%;
+   height: 304px;
+   
+}
+
+@media (max-width: 768px) {
+   .card_wrapper {
+      flex-direction: column;
+      row-gap: 40px;
+   }
 }

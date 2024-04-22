@@ -12,7 +12,7 @@ function Infra() {
          <div className={styles.wrapper}>
             <div className={styles.heading_wrapper}>
                <h2 className={styles.heading}>
-                  The infrastructure for building AI<br/> phone calling
+                  The infrastructure for building AI<br/>phone calling
                   applications at scale.
                </h2>
                <div className={styles.cat}>

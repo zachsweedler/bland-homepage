@@ -32,3 +32,31 @@
     top: -50px;
 }
 
+@media (max-width: 768px) {
+    .wrapper {
+        height: auto;
+        align-items: start;
+        padding: 0px 16px;
+        row-gap: 0px;
+    }
+    .subheading {
+        position: relative;
+        top: 0px;
+    }
+    .heading_wrapper {
+        row-gap: 12px;
+        align-items: start;
+        justify-content: end;
+        height: 250px;
+        padding-bottom: 50px;
+    }
+    .subheading {
+        font-size: 16px;
+    }
+    .heading {
+        font-size: 60px;
+        letter-spacing: -1px;
+        line-height: 55px;
+        text-align: left;
+    }
+}

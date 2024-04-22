@@ -26,11 +26,11 @@ function CallInput() {
                className={styles.input}
                placeholder="Your Name"
             />
-            <input
-               className={styles.input}
-               placeholder="Company"
-            />
-            <Button type="button">
+            <input className={styles.input} placeholder="Company" />
+            <Button
+               type="button"
+               style={{ width: "100%", justifyContent: "center" }}
+            >
                <PhoneIcon />
                Call Me
             </Button>

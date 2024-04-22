@@ -1,6 +1,8 @@
 .logo_wrapper {
    margin: 0px 30px;
    user-select: none;
+   width: auto;
+   height: auto;
 }
 
 .fade_left {
@@ -19,4 +21,14 @@
    z-index: 1000;
    height: 100px;
    width: 100px;
+}
+
+@media (max-width: 768px) {
+   .fade_left {
+      left: 16px;
+   }
+
+   .fade_right {
+      right: 16px;
+   }
 }

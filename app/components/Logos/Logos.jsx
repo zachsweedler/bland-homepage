@@ -49,8 +49,9 @@ function Logos() {
                   src={img.url}
                   alt={img.alt}
                   width={100}
-                  height={100}
+                  height={10}
                   className={styles.logo_wrapper}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                />
             ))}
          </Marquee>

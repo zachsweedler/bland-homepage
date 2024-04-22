@@ -23,6 +23,8 @@ function Scalability() {
                subheading="Scalability"
                buttonText="Contact Sales"
                linkText="Get Started"
+               buttonLink="https://app.bland.ai/login"
+               linkHref="https://app.bland.ai/enterprise"
             />
             <TwoColSec
                index="01"
@@ -31,13 +33,16 @@ function Scalability() {
                link="Contact Sales"
                bgColor="#F2F2EC"
                graphic={
-                  <Image
-                     src="/scalability/fine-tuning.svg"
-                     className={styles.sms_iphone}
-                     alt=""
-                     width={382}
-                     height={395}
-                  />
+                  <div className={styles.fine_tuning}>
+                     <Image
+                        src="/scalability/fine-tuning.svg"
+                        alt=""
+                        fill={true}
+                        style={{
+                           objectFit: "contain",
+                        }}
+                     />
+                  </div>
                }
             />
             <TwoColSec
@@ -54,13 +59,14 @@ function Scalability() {
                link="Contact Sales"
                bgColor="#5A36EC"
                graphic={
-                  <Marquee autoFill>
+                  <div className={styles.integration_wrapper}>
                      <Image
                         src="/scalability/custom-tools/calcom.svg"
                         className={styles.integration_logo}
                         alt=""
                         width={85}
                         height={85}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                      />
                      <Image
                         src="/scalability/custom-tools/calendly.svg"
@@ -68,6 +74,7 @@ function Scalability() {
                         alt=""
                         width={85}
                         height={85}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                      />
                      <Image
                         src="/scalability/custom-tools/stripe.svg"
@@ -75,6 +82,7 @@ function Scalability() {
                         alt=""
                         width={85}
                         height={85}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                      />
                      <Image
                         src="/scalability/custom-tools/zapier.svg"
@@ -82,8 +90,41 @@ function Scalability() {
                         alt=""
                         width={85}
                         height={85}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                      />
-                  </Marquee>
+                     <Image
+                        src="/scalability/custom-tools/calcom.svg"
+                        className={styles.integration_logo}
+                        alt=""
+                        width={85}
+                        height={85}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                     />
+                     <Image
+                        src="/scalability/custom-tools/calendly.svg"
+                        className={styles.integration_logo}
+                        alt=""
+                        width={85}
+                        height={85}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                     />
+                     <Image
+                        src="/scalability/custom-tools/stripe.svg"
+                        className={styles.integration_logo}
+                        alt=""
+                        width={85}
+                        height={85}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                     />
+                     <Image
+                        src="/scalability/custom-tools/zapier.svg"
+                        className={styles.integration_logo}
+                        alt=""
+                        width={85}
+                        height={85}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                     />
+                  </div>
                }
             />
             <TwoColSec
@@ -101,10 +142,11 @@ function Scalability() {
                graphic={
                   <Image
                      src="/scalability/infrastructure/serverrack.svg"
-                     className={styles.sms_iphone}
+                     className={styles.server_rack}
                      alt=""
                      width={576}
                      height={276}
+                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                }
             />
@@ -121,43 +163,46 @@ function Scalability() {
                link="Contact Sales"
                bgColor="#F2F2EC"
                graphic={
-                  <Marquee>
-                     <Image
-                        src="/scalability/security/vault2.svg"
-                        className={styles.sms_iphone}
-                        alt=""
-                        width={84}
-                        height={79}
-                     />
-                     <Image
-                        src="/scalability/security/vault3.svg"
-                        className={styles.sms_iphone}
-                        alt=""
-                        width={112}
-                        height={105}
-                     />
-                     <Image
-                        src="/scalability/security/vault1.svg"
-                        className={styles.sms_iphone}
-                        alt=""
-                        width={232}
-                        height={225}
-                     />
-                     <Image
-                        src="/scalability/security/vault4.svg"
-                        className={styles.sms_iphone}
-                        alt=""
-                        width={84}
-                        height={79}
-                     />
-                     <Image
-                        src="/scalability/security/vault5.svg"
-                        className={styles.sms_iphone}
-                        alt=""
-                        width={112}
-                        height={105}
-                     />
-                  </Marquee>
+                  <div className={styles.vault_wrapper}>
+                     <Marquee>
+                        <Image
+                           src="/scalability/security/vault2.svg"
+                           className={styles.vault}
+                           alt=""
+                           width={84}
+                           height={79}
+                        />
+                        <Image
+                           src="/scalability/security/vault3.svg"
+                           className={styles.vault}
+                           alt=""
+                           width={112}
+                           height={105}
+                        />
+                        <Image
+                           src="/scalability/security/vault1.svg"
+                           className={styles.vault}
+                           alt=""
+                           width={232}
+                           height={225}
+                           style={{ marginLeft: "30px" }}
+                        />
+                        <Image
+                           src="/scalability/security/vault4.svg"
+                           className={styles.vault}
+                           alt=""
+                           width={84}
+                           height={79}
+                        />
+                        <Image
+                           src="/scalability/security/vault5.svg"
+                           className={styles.vault}
+                           alt=""
+                           width={112}
+                           height={105}
+                        />
+                     </Marquee>
+                  </div>
                }
             />
          </div>

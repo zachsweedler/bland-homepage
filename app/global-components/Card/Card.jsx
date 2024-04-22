@@ -10,12 +10,14 @@ function Card({
    insideText,
    outsideText,
    linkText,
+   linkHref,
    darkBg,
+   height,
    ...props
 }) {
    return (
       <div {...props} style={{ width: "100%" }}>
-         <div className={darkBg ? styles.wrapper_dark : styles.wrapper }>
+         <div className={darkBg ? styles.wrapper_dark : styles.wrapper } style={{height: height}}>
             {graphic}
             {insideText && (
                <div
@@ -34,7 +36,7 @@ function Card({
             <div className={styles.heading_wrapper_outside}>
                <h4>{heading}</h4>
                <p className={styles.subheading}>{subheading}</p>
-               <TextLink className={styles.link_text}>{linkText}</TextLink>
+               <TextLink href={linkHref} className={styles.link_text}>{linkText}</TextLink>
             </div>
          )}
       </div>

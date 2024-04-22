@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import styles from "./nocode.module.css";
 import SectionTitle from "@/app/global-components/SectionTitle/SectionTitle";
@@ -21,6 +22,8 @@ function NoCode() {
                   subheading="For everyone"
                   buttonText="Get Started"
                   linkText="Contact Sales"
+                  buttonLink="https://app.bland.ai/login"
+                  linkHref="https://app.bland.ai/enterprise"
                />
                <div className={styles.card_wrapper}>
                   <Card
@@ -28,15 +31,18 @@ function NoCode() {
                      outsideText
                      heading="Dashboard"
                      subheading="Send test calls, tweak agent settings, and create conversational pathways without code."
-                     linkText="Go to Respell"
+                     linkText="Go to Dashboard"
+                     linkHref="https://app.bland.ai/login"
+                     height={376}
                      graphic={
-                        <Image
-                           src="/nocode/devdash.png"
-                           className={styles.screenshot}
-                           alt=""
-                           width={489}
-                           height={315}
-                        />
+                        <div className={styles.screenshot}>
+                           <Image
+                              src="/nocode/devdash.png"
+                              alt=""
+                              fill={true}
+                              style={{ objectFit: "contain",  objectPosition: 'bottom' }}
+                           />
+                        </div>
                      }
                   />
                   <Card
@@ -45,14 +51,17 @@ function NoCode() {
                      heading="Respell"
                      subheading="Bland integrated with Respell, a no-code platform for generative AI."
                      linkText="Go to Respell"
+                     linkHref="https://www.respell.ai/"
+                     height={376}
                      graphic={
-                        <Image
-                           src="/nocode/respell.png"
-                           className={styles.screenshot}
-                           alt=""
-                           width={489}
-                           height={315}
-                        />
+                        <div className={styles.screenshot}>
+                           <Image
+                              src="/nocode/respell.png"
+                              alt=""
+                              fill={true}
+                              style={{ objectFit: "contain", objectPosition: 'bottom'}}
+                           />
+                        </div>
                      }
                   />
                </div>

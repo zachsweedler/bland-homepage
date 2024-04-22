@@ -21,6 +21,8 @@ function Features() {
                subheading="Feature Packed"
                buttonText="Get Started"
                linkText="Contact Sales"
+               buttonLink="https://app.bland.ai/login"
+               linkHref="https://app.bland.ai/enterprise"
             />
             <div className={styles.grid}>
                <Card
@@ -29,7 +31,7 @@ function Features() {
                   heading="Batch Calls"
                   subheading="Send or receive millions of calls simultaneously"
                   graphic={
-                     <>
+                     <div className={styles.graphic_wrapper}>
                         <Image
                            src="/features/batch/person1.svg"
                            className={styles.person_1}
@@ -65,7 +67,7 @@ function Features() {
                            width={179}
                            height={179}
                         />
-                     </>
+                     </div>
                   }
                />
                <Card
@@ -101,8 +103,8 @@ function Features() {
                         src="/features/iphone-sms.png"
                         className={styles.sms_iphone}
                         alt=""
-                        width={213}
-                        height={435}
+                        width={313}
+                        height={545}
                      />
                   }
                />
@@ -116,8 +118,8 @@ function Features() {
                         src="/features/live-transfer.svg"
                         className={styles.live_transfers}
                         alt=""
-                        width={636}
-                        height={282}
+                        width={330}
+                        height={82}
                      />
                   }
                />

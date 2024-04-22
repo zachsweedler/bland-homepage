@@ -20,3 +20,10 @@
 .xsmall {
    max-width: var(--container-xsmall);
 }
+
+
+@media (max-width: 768px) {
+   .container {
+      padding: 0px 16px;
+   }
+}

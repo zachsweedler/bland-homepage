@@ -8,15 +8,22 @@ function Nav() {
       <div className={styles.wrapper}>
          <div className={styles.logo_wrapper}>BLAND AI</div>
          <div className={styles.menu_items_wrapper}>
-            <TextLink>Docs</TextLink>
-            <TextLink>Pricing</TextLink>
-            <TextLink>Demo</TextLink>
-            <TextLink>No Code</TextLink>
-            <TextLink>Enterprise</TextLink>
+            <TextLink href="https://docs.bland.ai/welcome-to-bland">
+               Docs
+            </TextLink>
+            <TextLink href="https://app.bland.ai/enterprise">Demo</TextLink>
+            <TextLink href="https://zapier.com/apps/bland-ai/integrations">
+               No Code
+            </TextLink>
+            <TextLink href="https://app.bland.ai/enterprise">
+               Enterprise
+            </TextLink>
          </div>
          <div className={styles.cat_wrapper}>
-            <TextLink>Contact Sales</TextLink>
-            <Button>Login</Button>
+            <TextLink href="https://app.bland.ai/login">Login</TextLink>
+            <Button href="https://app.bland.ai/enterprise">
+               Contact Sales
+            </Button>
          </div>
       </div>
    );

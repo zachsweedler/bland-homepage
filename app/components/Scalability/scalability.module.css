@@ -1,11 +1,62 @@
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    row-gap: 100px;
-    padding: 100px 0px;
+   display: flex;
+   flex-direction: column;
+   row-gap: 100px;
+   padding: 100px 0px;
 }
 
 .enterprise {
-    color: var(--color-primary);
+   color: var(--color-primary);
 }
+
+.fine_tuning {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   width: 70%;
+   height: 70%;
+}
+
+.integration_logo {
+   display: flex;
+   flex-direction: column;
+   width: auto;
+   height: auto;
+}
+
+.integration_wrapper {
+   display: flex;
+   flex-direction: column;
+   row-gap: 20px;
+   position: absolute;
+   left: 50%;
+   top: -25px;
+   transform: translateX(-50%);
+}
+
+.server_rack {
+   position: absolute;
+   right: -90px;
+   top: 50%;
+   transform: translateY(-50%);
+   width: auto;
+   height: auto;
+}
+
+.vault_wrapper {
+   display: flex;
+   flex-direction: row;
+   column-gap: 5px;
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+}
+
+.vault {
+   margin-left: 30px;
+   width: auto;
+   height: auto;
+}
+
 

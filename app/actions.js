@@ -7,6 +7,7 @@ export async function sendCall(formData) {
    // console.log("formData", formData);
    const res = await axios.post(
       "https://app.bland.ai/v1/welcome/call",
+      {},
       {
          phone_number: formData.phone_number,
          firstName: formData.name,

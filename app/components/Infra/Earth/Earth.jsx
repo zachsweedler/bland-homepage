@@ -165,8 +165,7 @@ function Earth() {
                geometry.properties.abbrev_len % 4
             ];
          }}
-         hexPolygonAltitude={0.03}
-
+ 
          // Rings
          ringsData={ringsData}
          ringMaxRadius="radius"
@@ -176,7 +175,6 @@ function Earth() {
          }}
          ringPropagationSpeed="speed"
          ringRepeatPeriod="repeat"
-         ringAltitude={0.03}
 
          // Stars
          customLayerData={[...Array(500).keys()].map(() => ({

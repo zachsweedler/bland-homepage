@@ -34,6 +34,7 @@ function CodePreview() {
       color: "white",
       fontSize: "12px",
       width: "100%",
+      padding: '0px'
    };
 
    const handleLanguageClick = (language) => {
@@ -58,7 +59,9 @@ function CodePreview() {
          <SyntaxHighlighter
             language={activeLanguage.toLowerCase()}
             customStyle={customStyle}
+            lineProps={{style: {wordBreak: 'break-all', whiteSpace: 'pre-wrap'}}}
             style={vs2015}
+            wrapLines={true} 
          >
             {codeStrings[activeLanguage]}
          </SyntaxHighlighter>

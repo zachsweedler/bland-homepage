@@ -6,17 +6,20 @@ import TextLink from "../TextLink/TextLink";
 function Footer() {
    return (
       <div className={styles.wrapper}>
-         <Container large style={{height: '100%'}}>
+         <Container large style={{ height: "100%" }}>
             <div className={styles.menus_wrapper}>
                <div className={styles.menu}>
-                  <p>BLAND AI</p>
+                  <p className={styles.logo}>BLAND AI</p>
                   <p>The platform for AI phone calling</p>
                </div>
                <div className={styles.menu}>
-                  <TextLink>Enterprise</TextLink>
-                  <TextLink>Documentation</TextLink>
-                  <TextLink>Blog</TextLink>
-                  <TextLink>Contact</TextLink>
+                  <TextLink href="https://app.bland.ai/enterprise">
+                     Enterprise
+                  </TextLink>
+                  <TextLink href="https://docs.bland.ai/welcome-to-bland">
+                     Documentation
+                  </TextLink>
+                  <TextLink href="mailto:hello@bland.ai">Contact</TextLink>
                </div>
             </div>
          </Container>

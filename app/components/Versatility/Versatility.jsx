@@ -25,6 +25,8 @@ function Versatility() {
                      subheading="Scalability"
                      buttonText="Get Started"
                      linkText="Contact Sales"
+                     buttonLink="https://app.bland.ai/login"
+                     linkHref="https://app.bland.ai/enterprise"
                   />
                </div>
                <div className={styles.col}>

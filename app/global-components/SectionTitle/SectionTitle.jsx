@@ -9,17 +9,25 @@ function SectionTitle({
    buttonText,
    alignLeft,
    linkText,
+   buttonLink,
+   linkHref,
 }) {
    return (
       <div className={styles.wrapper}>
-         <div className={alignLeft ? styles.heading_wrapper_align_left : styles.heading_wrapper}>
+         <div
+            className={
+               alignLeft
+                  ? styles.heading_wrapper_align_left
+                  : styles.heading_wrapper
+            }
+         >
             <p className={styles.subheading}>{subheading}</p>
             <h1 className={styles.heading}>{heading}</h1>
          </div>
          {buttonText && (
             <div className={styles.cat_wrapper}>
-               <Button>{buttonText}</Button>
-               <TextLink>{linkText}</TextLink>
+               <Button href={buttonLink}>{buttonText}</Button>
+               <TextLink href={linkHref}>{linkText}</TextLink>
             </div>
          )}
       </div>

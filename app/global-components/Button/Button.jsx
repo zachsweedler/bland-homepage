@@ -1,12 +1,12 @@
-import React from 'react'
-import styles from './button.module.css'
+import React from "react";
+import styles from "./button.module.css";
 
-function Button({children}) {
-  return (
-    <button className={styles.button}>
-      {children}
-    </button>
-  )
+function Button({ href, children, ...props }) {
+   return (
+      <a href={href}>
+         <button className={styles.button} {...props}>{children}</button>
+      </a>
+   );
 }
 
-export default Button
+export default Button;
