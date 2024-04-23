@@ -36,17 +36,6 @@
    margin: auto;
 }
 
-@media (max-width: 768px) {
-   .wrapper {
-      align-items: start;
-   }
-   .heading_wrapper {
-      align-items: start;
-   }
-   .heading {
-      text-align: left;
-   }
-   .cat_wrapper {
-      margin: 0px;
-   }
+.wrapper {
+   padding: 0px 6px;
 }
