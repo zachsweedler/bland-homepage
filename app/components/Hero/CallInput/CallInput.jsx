@@ -1,11 +1,11 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import styles from "./callinput.module.css";
 import Button from "@/app/global-components/Button/Button";
 import Phone from "@/app/global-components/PhoneInput/Phone";
 import { PhoneIcon } from "@/app/global-components/Icons/PhoneIcon";
 import { FormProvider, useForm } from "react-hook-form";
-import { sendCall } from "@/app/actions";
+import axios from 'axios'
 
 function CallInput() {
    const methods = useForm();
@@ -13,7 +13,14 @@ function CallInput() {
 
    const onSubmit = async (formData) => {
       setLoading(true);
-      await sendCall(formData);
+      await axios.post(
+         "https://app.bland.ai/api/welcome/call",
+         {
+            phone_number: formData.phone_number,
+            firstName: formData.name,
+         },
+         {},
+      );
       setLoading(false);
    };
 

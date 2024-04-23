@@ -5,12 +5,12 @@ import axios from "axios";
 // send welcome call
 export async function sendCall(formData) {
    const res = await axios.post(
-      "https://app.bland.ai/v1/welcome/call",
+      "https://app.bland.ai/api/welcome/call",
       {},
       {
          phone_number: formData.phone_number,
          firstName: formData.name,
-      }
+      },
    );
    return res
 }
