@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./callinput.module.css";
 import Button from "@/app/global-components/Button/Button";
 import Phone from "@/app/global-components/PhoneInput/Phone";
@@ -9,9 +9,12 @@ import { sendCall } from "@/app/actions";
 
 function CallInput() {
    const methods = useForm();
+   const [loading, setLoading] = useState(false);
 
    const onSubmit = async (formData) => {
+      setLoading(true);
       await sendCall(formData);
+      setLoading(false);
    };
 
    return (
@@ -28,11 +31,11 @@ function CallInput() {
             />
             <input className={styles.input} placeholder="Company" />
             <Button
-               type="button"
+               type="submit"
                style={{ width: "100%", justifyContent: "center" }}
             >
                <PhoneIcon />
-               Call Me
+               {!loading ? "Call Me" : "Calling..."}
             </Button>
          </form>
       </FormProvider>

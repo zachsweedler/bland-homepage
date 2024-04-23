@@ -1,6 +1,8 @@
 .wrapper {
    background-color: var(--color-primary);
    height: 549px;
+   position: relative;
+   overflow: hidden;
 }
 
 .menus_wrapper {
@@ -25,11 +27,22 @@
    font-weight: 500;
 }
 
+.graphic {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   width: auto;
+   height: auto;
+}
+
 @media (max-width: 768px) {
    .wrapper {
       background-color: var(--color-primary);
       height: auto;
       padding: 100px 0px;
+      position: relative;
+      overflow: hidden;
    }
    
    .menus_wrapper {
@@ -37,5 +50,14 @@
       align-items: start;
       justify-content: start;
       row-gap: 40px;
+   }
+
+   .graphic {
+      position: absolute;
+      left: 90%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: auto;
+      height: auto;
    }
 }

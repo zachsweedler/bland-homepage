@@ -12,7 +12,7 @@ function WavePlayer() {
       height: 200,
       waveColor: "#CECEC9",
       progressColor: "#5A36EC",
-      url: "https://cdn.pixabay.com/audio/2024/03/16/audio_37d17c7ebe.mp3",
+      url: "/phonecall.mp3",
       barWidth: 3,
       barGap: 5,
       barRadius: 4,

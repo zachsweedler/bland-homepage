@@ -7,12 +7,12 @@ import Container from "@/app/global-components/Container/Container";
 function Logos() {
    const logos = [
       {
-         url: "/clients/airbnb.svg",
-         alt: "airbnb",
+         url: "/clients/accenture.svg",
+         alt: "accenture",
       },
       {
-         url: "/clients/coinbase.svg",
-         alt: "coinbase",
+         url: "/clients/advantismed.svg",
+         alt: "advantismed",
       },
       {
          url: "/clients/dominos.svg",
@@ -23,8 +23,16 @@ function Logos() {
          alt: "ycombinator",
       },
       {
-         url: "/clients/nookit.svg",
-         alt: "nookit",
+         url: "/clients/divvy.svg",
+         alt: "divvy",
+      },
+      {
+         url: "/clients/gohighlevel.svg",
+         alt: "gohighlevel",
+      },
+      {
+         url: "/clients/servicenow.svg",
+         alt: "servicenow",
       },
    ];
 
@@ -51,7 +59,6 @@ function Logos() {
                   width={100}
                   height={10}
                   className={styles.logo_wrapper}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                />
             ))}
          </Marquee>

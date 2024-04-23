@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./footer.module.css";
 import Container from "../Container/Container";
+import Image from 'next/image'
 import TextLink from "../TextLink/TextLink";
 
 function Footer() {
@@ -21,7 +22,9 @@ function Footer() {
                   </TextLink>
                   <TextLink href="mailto:hello@bland.ai">Contact</TextLink>
                </div>
+               <Image src="/footergraphic.svg" alt="footer" width="650" height="650" className={styles.graphic}/>
             </div>
+          
          </Container>
       </div>
    );

@@ -4,7 +4,6 @@ import axios from "axios";
 
 // send welcome call
 export async function sendCall(formData) {
-   // console.log("formData", formData);
    const res = await axios.post(
       "https://app.bland.ai/v1/welcome/call",
       {},
@@ -13,5 +12,5 @@ export async function sendCall(formData) {
          firstName: formData.name,
       }
    );
-   console.log("res", res);
+   return res
 }

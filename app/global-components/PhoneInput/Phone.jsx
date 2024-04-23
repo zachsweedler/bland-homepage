@@ -13,10 +13,11 @@ function Phone({ fieldName, ...props }) {
          name={fieldName}
          render={({ field: { onChange, value } }) => (
             <PhoneInput
-               value={typeof value === "number" ? value.toString() : value}
+               value={typeof value === "number" ? value.toString() : value || ''}
                autoFormat={true}
-               country={"us"}
                onChange={onChange}
+               country="us"
+               placeholder="Phone Number"
                inputStyle={{
                   width: "100%",
                   border: "none",
