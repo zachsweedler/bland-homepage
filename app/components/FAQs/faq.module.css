@@ -18,9 +18,14 @@
    width: 100%;
 }
 
+.link {
+   color: var(--color-primary);
+}
+
 @media (max-width: 768px) {
    .accordian_wrapper {
       grid-template-columns: 1fr;
       column-gap: 0px;
    }
 }
+

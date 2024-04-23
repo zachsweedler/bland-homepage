@@ -12,7 +12,7 @@ function WavePlayer() {
       height: 200,
       waveColor: "#CECEC9",
       progressColor: "#5A36EC",
-      url: "https://upload.wikimedia.org/wikipedia/en/d/d0/Rick_Astley_-_Never_Gonna_Give_You_Up.ogg",
+      url: "https://cdn.pixabay.com/audio/2024/03/16/audio_37d17c7ebe.mp3",
       barWidth: 3,
       barGap: 5,
       barRadius: 4,

@@ -18,7 +18,7 @@ function Code() {
                      <p className={styles.description}>
                         Get your API key and $2 free credits when you sign up.
                      </p>
-                     <Button>Read The Docs</Button>
+                     <Button href="https://docs.bland.ai/welcome-to-bland">Read The Docs</Button>
                   </div>
                </div>
                <div className={styles.col}>
