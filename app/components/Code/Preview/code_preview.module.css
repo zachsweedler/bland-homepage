@@ -5,7 +5,7 @@
    padding-left: 5px;
    border-radius: var(--border-radius-small);
    width: auto;
-   height: auto;
+   height: 450px;
    overflow-y: scroll;
    padding: 30px;
 }
@@ -21,20 +21,23 @@
    cursor: pointer;
    padding: 5px 9px;
    color: rgb(255, 255, 255, 0.4);
-   border-radius: var(--border-radius-small)
+   border-radius: var(--border-radius-small);
 }
 
 .language_button:hover {
-    background-color: rgb(255,255,255,0.06);
-    color: white;
+   background-color: rgb(255, 255, 255, 0.06);
+   color: white;
 }
 
 .language_button.active {
-    background-color: rgb(255,255,255,0.06);
-    color: white;
+   background-color: rgb(255, 255, 255, 0.06);
+   color: white;
 }
 
 @media (max-width: 768px) {
+   .wrapper {
+      height: auto;
+   }
    .language_wrapper {
       flex-wrap: wrap;
       gap: 5px;
